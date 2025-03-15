@@ -79,13 +79,15 @@ def series_median_comparator(series1, series2):
     series1_higher_medians = pd.DataFrame({
         'series1': series1[series1 > series2].round(5),
         'series2': series2[series1 > series2].round(5),
-        'difference': (series1[series1 > series2] - series2[series1 > series2]).round(5)
+        'difference': (series1[series1 > series2] - series2[series1 > series2]).round(5),
+        'series2/series1': (series2[series1 > series2] / series1[series1 > series2]).round(2)
     }).sort_values(by='difference', ascending=False)
     
     series2_higher_medians = pd.DataFrame({
         'series1': series1[series2 > series1].round(5),
         'series2': series2[series2 > series1].round(5),
-        'difference': (series2[series2 > series1] - series1[series2 > series1]).round(5)
+        'difference': (series2[series2 > series1] - series1[series2 > series1]).round(5),
+        'series1/series2': (series1[series2 > series1] / series2[series2 > series1]).round(2)
     }).sort_values(by='difference', ascending=False)
     
     series1_equals_series2 = pd.DataFrame({

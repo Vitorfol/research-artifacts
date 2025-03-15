@@ -6,16 +6,19 @@ from services.showBox import show_box
 from services.showCorrelation import show_correlation, show_correlation_between_files
 from services.showHistogram import show_histogram
 
+csv1_name = os.path.basename(sys.argv[1]).replace(".csv", "")
+csv2_name = os.path.basename(sys.argv[2]).replace(".csv", "")
+
 def clear_screen():
-    """Limpa a tela do console."""
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def wait_for_user():
-    """Pausa a execução até que o usuário pressione Enter."""
     input("\nPressione Enter para continuar...")
 
+def print_green_paths(csv1_name, csv2_name):
+    print(f"\033[92m1 = {csv1_name}, 2 = {csv2_name}\033[0m") 
+
 def display_menu(options, title):
-    """Exibe um menu de opções, limpando a tela antes de exibir."""
     clear_screen()
     print(f"=== {title} ===")
     for key, value in options.items():
@@ -23,7 +26,6 @@ def display_menu(options, title):
     print("0 - Voltar")
 
 def main_menu(csv1_final, csv2_final):
-    """Menu principal."""
     while True:
         options = {
             "1": "Comparadores",
@@ -58,10 +60,14 @@ def comparadores_menu(csv1_final, csv2_final):
 
         if choice == "1":
             clear_screen()
+            print_green_paths(csv1_name, csv2_name)
+            print()
             show_median_comparator(csv1_final, csv2_final)
             wait_for_user()
         elif choice == "2":
             clear_screen()
+            print_green_paths(csv1_name, csv2_name)
+            print() 
             show_kurtosis_and_skewness(csv1_final, csv2_final)
             wait_for_user()
         elif choice == "0":
@@ -71,7 +77,6 @@ def comparadores_menu(csv1_final, csv2_final):
             wait_for_user()
 
 def visualizadores_menu(csv1_final, csv2_final):
-    """Menu de visualizadores."""
     while True:
         options = {
             "1": "Box Plot",
@@ -82,7 +87,8 @@ def visualizadores_menu(csv1_final, csv2_final):
         display_menu(options, "Visualizadores")
         choice = input("Escolha uma opção: ").strip()
 
-        if choice in {"1", "2", "3"}:  
+        if choice in {"1", "2", "3"}:
+            print_green_paths(csv1_name, csv2_name)  
             df_choice = input("Deseja analisar o DF1 ou DF2? (1/2): ").strip()
             
             if df_choice == "1":
@@ -105,6 +111,8 @@ def visualizadores_menu(csv1_final, csv2_final):
             wait_for_user()
         elif choice == "4":
             clear_screen()
+            print_green_paths(csv1_name, csv2_name)
+            print()
             show_correlation_between_files(csv1_final, csv2_final)
             wait_for_user()
         elif choice == "0":
@@ -113,13 +121,14 @@ def visualizadores_menu(csv1_final, csv2_final):
             print("Opção inválida. Tente novamente.")
 
 def descrevedores_menu(csv1_final, csv2_final):
-    """Menu de descrevedores."""
     while True:
         options = {
             "1": "Descrever e Informações"
         }
         display_menu(options, "Descrevedores")
         choice = input("Escolha uma opção: ").strip()
+
+        print_green_paths(csv1_name, csv2_name)
 
         if choice == "1":
             while True:

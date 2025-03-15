@@ -1,7 +1,7 @@
 import sys
 import os
 
-# Adiciona o diretório src ao PYTHONPATH
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from data_processing.csvReader import load_csv_as_df
 from data_processing.trateData import convert_comma_and_percent_columns, convert_df_columns_to_float
