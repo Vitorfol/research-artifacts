@@ -22,7 +22,7 @@ def convert_comma_and_percent_columns(df):
                     pass  
     return df
 
-def find_correlations(df, threshold=0.7, start_index=3):
+def find_correlations(df, threshold=0.69, start_index=3):
     """
     Encontra pares de colunas que possuem correlação forte (positiva ou negativa).
     
