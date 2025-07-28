@@ -1,6 +1,6 @@
 # Project Repository - Analysis and Specifications
 
-Este repositório contém os arquivos e recursos utilizados na análise de quatro projetos descritos no artigo. O objetivo principal do projeto é realizar uma análise estatística dos dados coletados, além de gerar visualizações gráficas que facilitam a compreensão das informações. O repositório está estruturado em três pastas principais, cada uma com um propósito específico.
+Este repositório contém os arquivos e recursos utilizados na análise de três projetos descritos no artigo. O objetivo principal do projeto é realizar uma análise estatística dos dados coletados, além de gerar visualizações gráficas que facilitam a compreensão das informações. O repositório está estruturado em três pastas principais, cada uma com um propósito específico.
 
 ## Estrutura do Repositório
 
@@ -23,7 +23,7 @@ A pasta `data` contém as planilhas com todos os atributos analisados, desde os 
 - **PDF**: Todas as respostas de feedback aberto dos alunos estão armazenados no arquivo subjectivesAnswers.
 
 ### 3. **specifications/**
-A pasta `specifications` contém o documento fornecido pelo professor, que descreve os requisitos para o desenvolvimento dos projetos analisados. Este documento especifica as funcionalidades e diretrizes dos quatro projetos abordados neste estudo: o **Jogo**, o **Robô** e os **Padrões de Software**, onde os últimos são após a intervenção apresentada aos alunos.
+A pasta `specifications` contém o documento fornecido pelo professor, que descreve os requisitos para o desenvolvimento dos projetos analisados. Este documento especifica as funcionalidades e diretrizes dos três projetos abordados neste estudo: o **Jogo**, o **Robô** e os **Padrões de Software**, onde os últimos são após a intervenção apresentada aos alunos.
 
 Este arquivo serve como base para os requisitos dos trabalhos da disciplina, orientando o desenvolvimento e as expectativas dos projetos analisados.
 
