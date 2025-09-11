@@ -18,7 +18,8 @@ Para executar o código, forneça os caminhos absolutos dos dois arquivos CSV co
 ### 2. **data/**
 A pasta `data` está estruturada em 4 subdiretórios principais. O primeiro, intitulado "questionnaires", arquiva os dados coletados de dois questionários distintos. O primeiro, "firstquestionnaire", contém suas respectivas respostas, enquanto o segundo, "secondquestionnaire", é apresentado em uma pasta com dois arquivos específicos: "subjectiveAnswers", destinado ao registro das respostas subjetivas dos participantes, e "objectiveAnswers", que exibe um gráfico consolidado das respostas objetivas. O segundo subdiretório, "spreadsheets", possui as planilhas contendo os atributos considerados para a análise, incluindo tanto os que foram utilizados quanto os que foram posteriormente descartados, além do scriptdos dados para serem executados no ambiente Google Apps Script. Além disso, temos mais 2 arquivos, são esses: 
 
-- **median_comparison**: Este arquivo apresenta uma análise comparativa da variação das medianas (ou médias) entre os diferentes projetos.
+- **median_comparison**: Este arquivo apresenta uma análise comparativa da variação das medianas (ou médias) entre os projetos pós-intervenção.
+
 - **Describers**: Reúne todas as estatísticas descritivas — como média, variância, e valores de máximo e mínimo — que foram empregadas para a análise dos parâmetros da pesquisa.
 
 ### 3. **specifications/**
