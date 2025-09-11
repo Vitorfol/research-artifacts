@@ -27,11 +27,13 @@ A pasta `specifications` contém o documento fornecido pelo professor, que descr
 
 Este arquivo serve como base para os requisitos dos trabalhos da disciplina, orientando o desenvolvimento e as expectativas dos projetos analisados.
 
-### 4. **complementary_graphics/**
-O diretório `complementary_graphics` armazena gráficos gerados por meio do código desenvolvido para este estudo, os quais servem para fortalecer as conclusões apresentadas no artigo. O conteúdo está organizado da seguinte forma:
+### 4. **complementary_figures/**
+O diretório `complementary_figures` armazena gráficos gerados por meio do código desenvolvido para este estudo, os quais servem para fortalecer as conclusões apresentadas no artigo. O conteúdo está organizado da seguinte forma:
 
 - **cognitive_complexity-QP.1**: Apresenta os histogramas da complexidade cognitiva (cognitive complexity) ao longo dos semestres. Esta análise comparativa subsidia a resposta à Questão de Pesquisa 1 (QP1).
 - **cyclomatic_complexity-QP.1**: Contém os histogramas da complexidade ciclomática (cyclomatic complexity) distribuídos por semestre, fornecendo dados para a resposta à Questão de Pesquisa 1 (QP1).
 - **density_duplication-QP.2**: Exibe os boxplots da densidade de duplicação de código nos projetos analisados após a intervenção. Essa comparação é fundamental para a resposta da Questão de Pesquisa 2 (QP2).
+- **open_issues-QP.1**: Contém os histogramas do open issues distribuídos por semestre, fornecendo dados para a resposta à Questão de Pesquisa 1 (QP1).
+- **debt_ratio-QP.1**: Mostra os histogramas do debt_ratio durante os semestres, reforçando a resposta da Questão de Pesquisa 1 (QP1).
 
 ---
