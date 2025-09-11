@@ -1,0 +1,114 @@
+// Script da planilha para ser usado no AppScript
+function onOpen() {
+  const ui = SpreadsheetApp.getUi();
+  const menu = ui.createMenu('Ordenar Tabela');
+  
+  // Adiciona cada item de menu manualmente, usando funções específicas
+  menu.addItem('Por God Class', 'ordenarPorGodClass');
+  menu.addItem('Por Type checking', 'ordenarPorTypeChecking');
+  menu.addItem('Por Long Method', 'ordenarPorLongMethod');
+  menu.addItem('Por Feature Envy', 'ordenarPorFeatureEnvy');
+  menu.addItem('Por N code smells', 'ordenarPorNCodeSmells');
+  menu.addItem('Por Reliability Issues / R', 'ordenarPorReliabilityIssues');
+  menu.addItem('Por Debt Ratio / R', 'ordenarPorDebtRatio');
+  menu.addItem('Por Security Hotspots / R', 'ordenarPorSecurityHotspots');
+  menu.addItem('Por Density Duplication', 'ordenarPorDensityDuplication');
+  menu.addItem('Por LOC', 'ordenarPorLOC');
+  menu.addItem('Por Cyclomatic Complexity', 'ordenarPorCyclomaticComplexity');
+  menu.addItem('Por Cognitive Complexity', 'ordenarPorCognitiveComplexity');
+  menu.addItem('Por Open Issues', 'ordenarPorOpenIssues');
+  menu.addItem('Por Smells / LOC', 'ordenarPorSmellsLOC');
+  menu.addItem('Por Open Issue / LOC', 'ordenarPorOpenIssueLOC');
+  menu.addItem('Por Funções', 'ordenarPorFuncoes');
+  menu.addItem('Por Classes', 'ordenarPorClasses');
+  menu.addItem('Por SI High', 'ordenarPorSIHigh');
+  menu.addItem('Por SI Medium', 'ordenarPorSIMedium');
+  menu.addItem('Por SI Low', 'ordenarPorSILow');
+  menu.addItem('Por Consistência', 'ordenarPorConsistencia');
+  menu.addItem('Por Intencionalidade', 'ordenarPorIntencionalidade');
+  menu.addItem('Por Adaptabilidade', 'ordenarPorAdaptabilidade');
+  
+  // Adiciona o menu à interface do usuário
+  menu.addToUi();
+}
+
+// Funções específicas para cada coluna
+function ordenarPorGodClass() {
+  ordenarTabela(4); // Coluna 4: God Class
+}
+
+function ordenarPorTypeChecking() {
+  ordenarTabela(5); // Coluna 5: Type checking
+}
+
+function ordenarPorLongMethod() {
+  ordenarTabela(6); // Coluna 6: Long Method
+}
+
+function ordenarPorFeatureEnvy() {
+  ordenarTabela(7); // Coluna 7: Feature Envy
+}
+
+function ordenarPorNCodeSmells() {
+  ordenarTabela(8); // Coluna 8: N code smells
+}
+
+function ordenarPorReliabilityIssues() {
+  ordenarTabela(9); // Coluna 9: Reliability Issues / R
+}
+
+function ordenarPorDebtRatio() {
+  ordenarTabela(10); // Coluna 10: Debt Ratio / R
+}
+
+function ordenarPorSecurityHotspots() {
+  ordenarTabela(11); // Coluna 11: Security Hotspots / R
+}
+
+function ordenarPorDensityDuplication() {
+  ordenarTabela(12); // Coluna 12: Density Duplication
+}
+
+function ordenarPorLOC() {
+  ordenarTabela(13); // Coluna 13: LOC
+}
+
+function ordenarPorCyclomaticComplexity() {
+  ordenarTabela(14); // Coluna 14: Cyclomatic Complexity
+}
+
+function ordenarPorCognitiveComplexity() {
+  ordenarTabela(15); // Coluna 15: Cognitive Complexity
+}
+
+function ordenarPorOpenIssues() {
+  ordenarTabela(16); // Coluna 16: Open Issues
+}
+
+function ordenarPorSmellsLOC() {
+  ordenarTabela(17); // Coluna 17: Smells / LOC
+}
+
+function ordenarPorOpenIssueLOC() {
+  ordenarTabela(18); // Coluna 18: Open Issue / LOC
+}
+
+function ordenarPorFuncoes() { ordenarTabela(19); }
+function ordenarPorClasses() { ordenarTabela(20); }
+function ordenarPorSIHigh() { ordenarTabela(21); }
+function ordenarPorSIMedium() { ordenarTabela(22); }
+function ordenarPorSILow() { ordenarTabela(23); }
+function ordenarPorConsistencia() { ordenarTabela(24); }
+function ordenarPorIntencionalidade() { ordenarTabela(25); }
+function ordenarPorAdaptabilidade() { ordenarTabela(26); }
+
+// Função genérica para ordenar a tabela
+function ordenarTabela(colunaIndex) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+
+  // Definir o intervalo das linhas a partir da linha 45 até a última linha
+  const range = sheet.getRange(2, 1, sheet.getLastRow() - 1, sheet.getLastColumn());
+
+  // Ordenar pelo número da coluna passada como parâmetro
+  range.sort({ column: colunaIndex, ascending: true });
+}

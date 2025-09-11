@@ -16,15 +16,22 @@ O código está dividido em três menus principais:
 Para executar o código, forneça os caminhos absolutos dos dois arquivos CSV como argumentos. O código processará os dados e apresentará as análises e gráficos correspondentes.
 
 ### 2. **data/**
-A pasta `data` contém as planilhas com todos os atributos analisados, desde os dados originais até os descartados ao longo do artigo, tudo está dentro da pasta spreadsheets. Além disso, `data` inclui as respostas do questionários utilizados para coletar informações na pasta questionnaires, o primeiro questionário está na imagem firstQuestionnaire, já o segundo está na pasta secondQuestionnaire, que é dividida em 2 arquivos, um contém o pdf com as respostas subjetivas e outro a imagem do gráfico com as respostas objetivas.
+A pasta `data` está estruturada em 4 subdiretórios principais. O primeiro, intitulado "questionnaires", arquiva os dados coletados de dois questionários distintos. O primeiro, "firstquestionnaire", contém suas respectivas respostas, enquanto o segundo, "secondquestionnaire", é apresentado em uma pasta com dois arquivos específicos: "subjectiveAnswers", destinado ao registro das respostas subjetivas dos participantes, e "objectiveAnswers", que exibe um gráfico consolidado das respostas objetivas. O segundo subdiretório, "spreadsheets", possui as planilhas contendo os atributos considerados para a análise, incluindo tanto os que foram utilizados quanto os que foram posteriormente descartados, além do scriptdos dados para serem executados no ambiente Google Apps Script. Além disso, temos mais 2 arquivos, são esses: 
 
-- **Atributos Analisados**: Todos os atributos considerados relevantes para a análise, incluindo os descartados, estão documentados e armazenados nesta pasta.
-- **Gráficos**: O gráfico contendo as respostas do questionário está disponível para facilitar a visualização das respostas coletadas.
-- **PDF**: Todas as respostas de feedback aberto dos alunos estão armazenados no arquivo subjectivesAnswers.
+- **median_comparison**: Este arquivo apresenta uma análise comparativa da variação das medianas (ou médias) entre os projetos pós-intervenção.
+
+- **Describers**: Reúne todas as estatísticas descritivas — como média, variância, e valores de máximo e mínimo — que foram empregadas para a análise dos parâmetros da pesquisa.
 
 ### 3. **specifications/**
 A pasta `specifications` contém o documento fornecido pelo professor, que descreve os requisitos para o desenvolvimento dos projetos analisados. Este documento especifica as funcionalidades e diretrizes dos três projetos abordados neste estudo: o **Jogo**, o **Robô** e os **Pós-Intervenção**.
 
 Este arquivo serve como base para os requisitos dos trabalhos da disciplina, orientando o desenvolvimento e as expectativas dos projetos analisados.
+
+### 4. **complementary_graphics/**
+A pasta `complementary_graphics` contém gráficos gerados pelo nosso código que foratelecem as conclusões anotadas no artigo. Está dividida em: 
+
+- **cognitive_complexity-QP.1**: Mostra os histogramas de cognitive complexity ao longo dos semestres, tal comparação é utilizada na resposta da QP1.
+- **cyclomatic_complexity-QP.1**: Mostra os histogramas de cyclomatic complexity ao longo dos semestres, tal comparação é utilizada na resposta da QP1.
+- **density_duplication-QP.2**: Mostra os histogramas de cyclomatic complexity nos projetos pós-intervenção, tal comparação é utilizada na resposta da QP2.
 
 ---
