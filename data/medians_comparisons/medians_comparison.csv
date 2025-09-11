@@ -1,0 +1,14 @@
+metric;series1;series2;difference;comparison;min/max ratio
+LOC;529.0;616.0;87.0;df1 < df2;0.86
+Cyclomatic Complexity;119.5;131.0;11.5;df1 < df2;0.91
+Feature Envy;0.0;1.0;1.0;df1 < df2;0.0
+God Class;0.0;1.0;1.0;df1 < df2;0.0
+Open Issues;72.5;73.0;0.5;df1 < df2;0.99
+Cognitive Complexity;93.0;84.0;-9.0;df1 > df2;0.90
+Open Issue / LOC;19.995;11.66;-8.335;df1 > df2;0.58
+Long Method;14.5;11.0;-3.5;df1 > df2;0.76
+Consistência;6.0;3.5;-2.5;df1 > df2;0.58
+Smells / LOC;4.58;2.41;-2.17;df1 > df2;0.53
+Debt Ratio / R;0.059;0.0365;-0.0225;df1 > df2;0.62
+Reliability Issues / R;0.0;0.0;0.0;equal;
+Density Duplication;0.0;0.0;0.0;equal;
